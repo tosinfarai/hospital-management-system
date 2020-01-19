@@ -1,14 +1,9 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Superclass encompassing all insurance plans a patient can use
+ * Variable coverage is declared with default which will be initialized in the different subclass of this class
  */
-package hms;
 
-/**
- *
- * @author tosin
- */
+
 public class HealthInsurancePlan {
     
     double coverage; 
@@ -20,14 +15,5 @@ public class HealthInsurancePlan {
         this.coverage = coverage;
     }
     
-    // Don't worry about the below code and also the InsuranceBrand class
-	private InsuranceBrand offeredBy;
-
-	public InsuranceBrand getOfferedBy() {
-		return offeredBy;
-	}
-
-	public void setOfferedBy(InsuranceBrand offeredBy) {
-		this.offeredBy = offeredBy;
-	}
 }
+
