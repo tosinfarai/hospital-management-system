@@ -1,14 +1,10 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * This class evaluates the total bill a patient is to pay. 
+ * It has one method that takes a patient method and initial amount before insurance is applied.
+ * It returns a string of type double with the first element as what the insurance company pays and the second element as what the patient pays after discounts are applied. 
  */
-package hms;
 
-/**
- *
- * @author tosin
- */
+
 public class Billing {
      public static double[] computePaymentAmount(Patient patient, double amount) {
         
