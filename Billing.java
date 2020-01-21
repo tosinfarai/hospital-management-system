@@ -11,19 +11,18 @@ public class Billing {
         double[] payments = new double[2];
         
         HealthInsurancePlan patientInsurancePlan = patient.getInsurancePlan();
-        double insuranceCoverage = patientInsurancePlan.getCoverage();
         
-        double insurancePay = amount * insuranceCoverage;
+        double insurancePay = amount * patientInsurancePlan.getCoverage();
         double patientPay = amount - insurancePay;
         
         
-        if (insuranceCoverage == 0.9) {
+        if (patientInsurancePlan instanceof PlatinumPlan) {
             patientPay = patientPay - 50.0;    
-        } else if (insuranceCoverage == 0.8) {
+        } else if (patientInsurancePlan instanceof GoldPlan) {
             patientPay = patientPay - 40.0;
-        } else if (insuranceCoverage == 0.7) {
+        } else if (patientInsurancePlan instanceof SilverPlan) {
             patientPay = patientPay - 30.0;
-        } else if (insuranceCoverage == 0.6) {
+        } else if (patientInsurancePlan instanceof BronzePlan) {
             patientPay = patientPay - 25.0;
         } else {
             patientPay = patientPay - 20.0;
