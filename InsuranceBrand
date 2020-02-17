@@ -1,0 +1,9 @@
+/*
+ * An interface to represent all insurance companies (brands) to be used in this project
+ */
+ 
+ interface InsuranceBrand {
+    
+    public double computeMonthlyPremium(HealthInsurancePlan insurancePlan, int age, boolean smoking);
+            
+}
