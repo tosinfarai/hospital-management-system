@@ -1,7 +1,7 @@
 /*
  * A subclass of class HealthInsurancePlan with coverage of 0.9
+ * Premium to be deducted is calculated with 0.08 of salary and monthly premium based on the insurance brand BlueCrossBlueShield
  */
-
 
 public class PlatinumPlan extends HealthInsurancePlan {
     
@@ -10,9 +10,9 @@ public class PlatinumPlan extends HealthInsurancePlan {
     }
     
     @Override
-    public double computeMonthlyPremium (double salary){
-       double monthlyPremium = 0.08 * salary;
-       return monthlyPremium;
+    public double computeMonthlyPremium (double salary, int age, boolean smoking){
+       return 0.08 * salary + getOfferedBy().computeMonthlyPremium(this,age,smoking);
+       
     }
         
 }
