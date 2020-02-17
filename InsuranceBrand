@@ -1,5 +1,6 @@
 /*
  * An interface to represent all insurance companies (brands) to be used in this project
+ * Contains one method that will be implemented in subclasses
  */
  
  interface InsuranceBrand {
