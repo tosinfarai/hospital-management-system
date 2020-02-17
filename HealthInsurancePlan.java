@@ -1,10 +1,11 @@
 /*
  * Superclass encompassing all insurance plans a patient can use
  * Variable coverage is declared with default which will be initialized in the different subclass of this class
+ * computeMonthlyPremium is an abstract method to be implemented in subclasses.  
  */
 
 
-public class HealthInsurancePlan {
+public abstract class HealthInsurancePlan {
     
     double coverage; 
     private InsuranceBrand offeredBy;
@@ -16,7 +17,7 @@ public class HealthInsurancePlan {
         this.coverage = coverage;
     }
     
-    public abstract double computeMonthlyPremium (double salary);
+    public abstract double computeMonthlyPremium (double salary, int age, boolean smoking);
     
     public InsuranceBrand getOfferedBy() {
 	return offeredBy;
@@ -25,6 +26,5 @@ public class HealthInsurancePlan {
     public void setOfferedBy(InsuranceBrand offeredBy) {
 	this.offeredBy = offeredBy;
     }
-    
 }
 
