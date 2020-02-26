@@ -24,71 +24,39 @@
       
     @Override
     public double computeMonthlyPremium(HealthInsurancePlan insurancePlan, int age, boolean smoking) {
+    	
+    	double premium = 0.0;
+    	
         if (insurancePlan instanceof PlatinumPlan){
-            if (age > 55 && smoking) {
-                x += 300.0;
-                return x;
+            if (age > 55) {
+                premium += 200.0;
             }
-            else if (age > 55 && !smoking) {
-                x += 200.0;
-                return x;
+            if (smoking) {
+                premium +=100.0;
+            } 
+        }else if (insurancePlan instanceof GoldPlan){
+            if (age > 55) {
+                premium += 150.0;
             }
-            else if (age <= 55 && smoking) {
-                x +=100.0;
-                return x;
+            if (smoking) {
+                premium += 90.0;
             }
-            else {return 0.0;}
+        }else if (insurancePlan instanceof SilverPlan){
+            if (age > 55) {
+                premium += 100.0;
+            }
+            if (smoking) {
+                premium += 80.0;
+            }
+        }else {
+            if (age > 55) {
+                premium += 50.0;
+            }
+            if (smoking) {
+                premium += 70.0;
+            }
         } 
-        
-        else if (insurancePlan instanceof GoldPlan){
-            if (age > 55 && smoking) {
-                x += 240.0;
-                return x;
-            }
-            else if (age > 55 && !smoking) {
-                x += 150.0;
-                return x;
-            }
-            else if (age <= 55 && smoking) {
-                x += 90.0;
-                return x;
-            }
-            else {return 0.0;}
-        } 
-        
-        else if (insurancePlan instanceof SilverPlan){
-            if (age > 55 && smoking) {
-                x += 180.0;
-                return x;
-            }
-            else if (age > 55 && !smoking) {
-                x += 100.0;
-                return x;
-            }
-            else if (age <= 55 && smoking) {
-                x += 80.0;
-                return x;
-            }
-            else {return 0.0;}
-        } 
-        
-        else if (insurancePlan instanceof SilverPlan){
-            if (age > 55 && smoking) {
-                x += 120.0;
-                return x;
-            }
-            else if (age > 55 && !smoking) {
-                x += 50.0;
-                return x;
-            }
-            else if (age <= 55 && smoking) {
-                x += 70.0;
-                return x;
-            }
-            else {return 0.0;}
-        } 
-        
-        else {return 0.0;}
-        
+        return premium; 
     }
+    
 }
