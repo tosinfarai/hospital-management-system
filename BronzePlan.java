@@ -6,7 +6,7 @@
 public class BronzePlan extends HealthInsurancePlan {
     
     BronzePlan () {
-        coverage = 0.6;
+        setCoverage(0.6);
     }
     
     @Override
