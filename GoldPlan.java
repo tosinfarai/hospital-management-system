@@ -7,7 +7,7 @@
 public class GoldPlan extends HealthInsurancePlan {
     
     GoldPlan () {
-        coverage = 0.8;
+    	setCoverage(0.8);
     }
     
     @Override
