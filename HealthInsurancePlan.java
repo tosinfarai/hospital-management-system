@@ -7,7 +7,7 @@
 
 public abstract class HealthInsurancePlan {
     
-    double coverage; 
+    private double coverage; 
     private InsuranceBrand offeredBy;
     
     public double getCoverage () {
