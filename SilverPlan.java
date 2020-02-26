@@ -7,7 +7,7 @@
 public class SilverPlan extends HealthInsurancePlan {
     
     SilverPlan () {
-        coverage = 0.7;
+    	setCoverage(0.7);
     }
     
     @Override
