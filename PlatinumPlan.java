@@ -6,7 +6,7 @@
 public class PlatinumPlan extends HealthInsurancePlan {
     
     PlatinumPlan () {
-        coverage = 0.9;
+        setCoverage(0.9);
     }
     
     @Override
